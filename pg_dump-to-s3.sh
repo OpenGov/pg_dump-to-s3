@@ -1,4 +1,5 @@
 #!/bin/bash
+PATH=/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 set -e
 
@@ -12,7 +13,7 @@ source $DIR/secrets.conf
 dbs=("$@")
 
 for db in "${dbs[@]}"; do
-    FILENAME="$PREFIX"_"$NOW"_"$db"    
+    FILENAME="$NOW"-"$db"    
 
     # Dump database
     pg_dump $PG_DB/$db --format=c  > /tmp/"$FILENAME".dump
@@ -27,7 +28,7 @@ for db in "${dbs[@]}"; do
     echo "Database $db is archived"
 done
 
-# Delere old files
-echo "Delete old backups";
-$DIR/s3-autodelete.sh $S3_PATH "$MAX_DAYS days"
+# Delete old files
+# echo "Delete old backups";
+# $DIR/s3-autodelete.sh $S3_PATH "$MAX_DAYS days"
 
