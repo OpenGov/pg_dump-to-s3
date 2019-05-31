@@ -9,11 +9,13 @@ Automatically dump and archive PostgreSQL backups to Amazon S3
 ## Setup
 
 Add secrets.conf:
-  - PG_HOST and PG_USER with your PostgreSQL hosts and backup user.
-  - PG_DB with pg connection string
-  - S3_PATH with your Amazon S3 bucket and path
-  - AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY with your aws credentials
-  - MAX_DAYS number of days before backups deleted
+  - PG_HOST - PostgresSQL host
+  - PG_USER - PostgreSQL backup user.
+  - PG_DB - pg connection string
+  - S3_PATH - your Amazon S3 bucket and path
+  - AWS_ACCESS_KEY_ID - aws credential
+  - AWS_SECRET_ACCESS_KEY - aws credentials
+  - MAX_DAYS -  number of days before backups deleted
 
 ## Usage
 
