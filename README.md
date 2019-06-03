@@ -10,7 +10,7 @@ Automatically dump and archive PostgreSQL backups to Amazon S3
 
 Add secrets.conf:
   - PG_HOST - PostgresSQL host
-  - PG_USER - PostgreSQL backup user.
+  - PG_USER - PostgreSQL backup user
   - PG_DB - pg connection string
   - S3_PATH - your Amazon S3 bucket and path
   - AWS_ACCESS_KEY_ID - aws credential
