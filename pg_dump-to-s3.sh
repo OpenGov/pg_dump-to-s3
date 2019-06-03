@@ -7,7 +7,7 @@ NOW=$(date +"%m-%d-%Y-at-%H-%M-%S")
 
 source $DIR/secrets.conf
 
-# get databases list
+# Get databases list
 dbs=("$@")
 
 for db in "${dbs[@]}"; do
@@ -27,6 +27,7 @@ for db in "${dbs[@]}"; do
 done
 
 # Delete old files
-# echo "Delete old backups";
-# $DIR/s3-autodelete.sh $S3_PATH "$MAX_DAYS days"
+# These following command will only work in a Linux environment
+echo "Delete old backups";
+$DIR/s3-autodelete.sh $S3_PATH "$MAX_DAYS days"
 
