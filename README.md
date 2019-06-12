@@ -15,6 +15,8 @@ Add secrets.conf:
   - AWS_ACCESS_KEY_ID - aws credential
   - AWS_SECRET_ACCESS_KEY - aws credentials
 
+ There is an example file called secrets.example.conf you can use.
+
 ## Usage
 
 ```
