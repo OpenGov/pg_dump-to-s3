@@ -22,12 +22,12 @@ AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KE
 
     if [[ $createDate -lt $maxDate ]]
     then
-    # Get file name
+        # Get file name
         fileName=`echo $line|awk {'print $4'}`
         if [[ $fileName != "" ]]
-          then
-          echo "* Delete $fileName";
-          AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY  aws s3 rm s3://$1/$fileName
+        then
+            echo "* Delete $fileName";
+            AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY  aws s3 rm s3://$1/$fileName
         fi
     fi
 done;
