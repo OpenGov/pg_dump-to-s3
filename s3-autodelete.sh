@@ -39,7 +39,7 @@ AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KE
             continue
         fi
     else
-      echo "$createDate skipped because not a file";
+      echo "$line skipped because not a suppoorted file or is a folder";
       continue    
     fi
 done;
