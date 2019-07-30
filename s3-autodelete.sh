@@ -7,7 +7,7 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 dateToday=`date`
-regexEndsInSql='^.*\.(sql)$'
+regexEndsInSql='^.*\.sql$'
 
 source $DIR/secrets.conf
 
